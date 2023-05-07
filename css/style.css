@@ -1,0 +1,117 @@
+body 
+	{
+	background: #f3f3f3;
+	background-size: 100% 100%;
+	margin: 0px;
+	background-attachment: fixed;
+    /*margin: 0 15%;*/
+	}
+p{
+    text-align: center;
+    font-size: 1.2em;
+    color: #333333;
+}
+main
+	{
+    background: #f3f3f3;
+    background-size: 100% 100%;
+    text-align: center;
+    margin: 0 15%;
+	}
+
+footer 
+	{
+    background-image: linear-gradient(to top, #027094, #f3f3f3);
+    background-size: 100% 100%;
+	}
+aside{
+    padding: 3vh 0 0 50%;
+    float: left; 
+    position: static; 
+}
+aside p{
+    text-align: left;
+}
+header{
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    background-color: #4DB8DC;
+}
+div.nach
+	{
+	border-width: thick;
+	border: 2px solid black;
+	background-color: black;
+
+	}
+.map{
+    padding: 5vh;
+    width: 45%;
+}
+
+
+/* Стили кнопки */
+.iksweb {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #4DB8DC;
+    color: #fff;
+    border-radius: 2px;
+    font-size: 18px;
+    padding: 20px; 
+    margin: 0 5em;
+    transition: all 1.4s;
+}
+.iksweb:hover{
+    text-decoration: none; 
+    background-color: #037094;
+    color: #fff;
+}
+
+
+.cat 
+{
+    display: inline-block !important;
+    text-decoration: none !important;
+    background-color: #3D8DDC !important;
+    color: #c1c1c1 !important;
+    border: 3px solid #bfbfbf !important;
+    border-radius: 8px !important;
+    font-size: 22px !important;
+    padding: 0px 100px !important; 
+    transition: all 1.4s ease !important;
+    width: 290px;
+}
+.cat:hover
+	{   
+	text-decoration: none !important; 
+    background-color: #008ac1 !important;
+    color: #000000 !important;
+    border-color: #00ffff !important;
+    }
+.catf
+{
+    background-color: #9DB8DF !important;
+    color: #c1c1c1 !important;
+    border: 3px solid #bfbfbf !important;
+    border-radius: 8px !important;
+    font-size: 22px !important;
+    padding: 0px 100px !important; 
+}
+.discription
+{
+    align="center";
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 0%;
+    background-color: #4DB8DC !important;
+    border: 1px solid #bfbfbf !important;
+    border-radius: 8px !important;
+    font-size: 18px !important;
+    padding: 0px 100px !important; 
+}
+.fon
+{
+    background-color: #16F7BB !important;
+}
