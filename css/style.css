@@ -527,8 +527,8 @@ main {
 @media (min-width: 901px) {
   body {
     background-image: url("../img/background.png");
-    background-size: 100% auto;
-    background-position: center;
+    background-size: auto 100%;
+    background-position: top center;
     background-attachment: fixed;
     background-repeat: no-repeat;
   }
