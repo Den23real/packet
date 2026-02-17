@@ -524,6 +524,15 @@ main {
   }
 }
 
+@media (min-width: 901px) {
+  body {
+    background-image: url("../img/background.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+}
+
 @media (max-width: 600px) {
   .hero-actions,
   .header-cta {
