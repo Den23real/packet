@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="uПАКovka">
+  <defs>
+    <linearGradient id="shade" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#201a14" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#201a14" stop-opacity="0.65"/>
+    </linearGradient>
+  </defs>
+  <image href="background-1920.jpg" x="0" y="0" width="1200" height="630" preserveAspectRatio="xMidYMid slice"/>
+  <rect width="1200" height="630" fill="url(#shade)"/>
+  <text x="80" y="270" font-family="'Fraunces', 'Times New Roman', serif" font-size="96" fill="#fff">uПАКovka</text>
+  <text x="80" y="350" font-family="'DM Sans', 'Arial', sans-serif" font-size="36" fill="#ffe2d3">
+    Упаковка и пакеты для торговли и доставки
+  </text>
+</svg>

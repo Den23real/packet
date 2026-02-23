@@ -262,7 +262,7 @@ button:focus-visible {
 
 .btn-primary {
   background: var(--accent);
-  color: #fff;
+  color: var(--ink);
   box-shadow: 0 12px 24px rgba(255, 107, 61, 0.3);
 }
 
@@ -742,6 +742,11 @@ button:focus-visible {
   .js .nav-link {
     padding: 10px 14px;
     font-size: 16px;
+    min-height: 44px;
+  }
+
+  .btn {
+    min-height: 44px;
   }
 
   .hero-grid,
