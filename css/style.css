@@ -18,7 +18,7 @@
 
 body {
   font-family: "DM Sans", sans-serif;
-  background: linear-gradient(rgba(245, 241, 234, 0.88), rgba(245, 241, 234, 0.88)),
+  background: linear-gradient(rgba(245, 241, 234, 0.72), rgba(245, 241, 234, 0.72)),
               url("../img/background.png") center / cover fixed,
               var(--bg);
   color: var(--ink);
@@ -140,6 +140,22 @@ a {
 .hero {
   position: relative;
   overflow: hidden;
+}
+
+.page-hero {
+  padding: 80px 0 40px;
+}
+
+.page-title {
+  font-family: "Fraunces", serif;
+  font-size: clamp(30px, 3.6vw, 44px);
+  margin-bottom: 12px;
+}
+
+.page-lead {
+  color: var(--muted);
+  max-width: 720px;
+  font-size: 18px;
 }
 
 .hero-grid {
