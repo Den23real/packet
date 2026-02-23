@@ -103,6 +103,17 @@ a {
   pointer-events: none;
 }
 
+.header-cta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn-social {
+  padding: 10px 14px;
+  font-size: 13px;
+}
+
 .nav-link {
   padding: 6px 0;
   position: relative;
