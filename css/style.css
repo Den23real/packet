@@ -26,7 +26,9 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: url("../img/background-1920.jpg") center / cover no-repeat;
+  background:
+    linear-gradient(90deg, rgba(245, 241, 234, 0.96), rgba(245, 241, 234, 0.6), rgba(245, 241, 234, 0.96)),
+    url("../img/background-1920.jpg") center / contain no-repeat;
   transform: scale(1.02);
   z-index: -2;
 }
