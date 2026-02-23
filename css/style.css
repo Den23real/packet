@@ -5,7 +5,7 @@
   --accent: #ff6b3d;
   --accent-dark: #e1552b;
   --sand: #f2dbc8;
-  --card: #fffaf3;
+  --card: #f7e7d8;
   --stroke: #e7d5c2;
   --shadow: 0 24px 60px rgba(32, 26, 20, 0.12);
 }
@@ -390,12 +390,13 @@ a {
 }
 
 .card {
-  background: #fff;
+  background: var(--card);
   border: 1px solid var(--stroke);
   border-radius: 20px;
   padding: 22px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   min-height: 180px;
+  box-shadow: var(--shadow);
 }
 
 .card:hover {
@@ -459,10 +460,11 @@ a {
 }
 
 .contact-card {
-  background: #fff;
+  background: var(--card);
   border: 1px solid var(--stroke);
   border-radius: 20px;
   padding: 24px;
+  box-shadow: var(--shadow);
 }
 
 .contact-card a {
