@@ -44,4 +44,7 @@ jobs:
             -e "ssh -p ${SSH_PORT}" \
             --exclude ".git" \
             --exclude ".github" \
+            --exclude ".idea" \
+            --exclude "__MACOSX" \
+            --exclude ".DS_Store" \
             ./ "${SSH_USER}@${SSH_HOST}:${TARGET_DIR}/"
