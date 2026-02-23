@@ -96,6 +96,10 @@ a {
 .nav-link {
   padding: 6px 0;
   position: relative;
+  border: 1px solid rgba(231, 213, 194, 0.9);
+  border-radius: 999px;
+  padding: 6px 14px;
+  transition: border-color 0.2s ease, color 0.2s ease;
 }
 
 .nav-link::after {
@@ -111,6 +115,11 @@ a {
 
 .nav-link:hover::after {
   width: 100%;
+}
+
+.nav-link:hover {
+  border-color: rgba(255, 107, 61, 0.6);
+  color: var(--ink);
 }
 
 .header-cta {
@@ -199,8 +208,8 @@ a {
 }
 
 .badge--accent {
-  background: var(--sand);
-  border-color: transparent;
+  background: #fff;
+  border-color: var(--stroke);
 }
 
 .hero-title {
