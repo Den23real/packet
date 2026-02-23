@@ -159,6 +159,15 @@ a {
   color: var(--ink);
 }
 
+.nav-link.is-active {
+  border-color: var(--accent);
+  color: var(--ink);
+}
+
+.nav-link.is-active::after {
+  width: 100%;
+}
+
 .header-cta {
   display: flex;
   gap: 12px;
@@ -223,8 +232,8 @@ a {
   display: inline-block;
   padding: 6px 12px;
   border-radius: 14px;
-  background: rgba(255, 250, 243, 0.78);
-  border: 1px solid rgba(231, 213, 194, 0.7);
+  background: rgba(255, 250, 243, 0.6);
+  border: 1px solid rgba(231, 213, 194, 0.45);
   box-shadow: var(--surface-shadow);
   backdrop-filter: blur(4px);
 }
@@ -654,6 +663,10 @@ a {
 }
 
 @media (max-width: 640px) {
+  .text-panel {
+    background: rgba(255, 250, 243, 0.72);
+  }
+
   .nav {
     flex-wrap: wrap;
   }
