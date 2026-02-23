@@ -37,7 +37,7 @@ body::after {
   content: "";
   position: fixed;
   inset: 0;
-  background: linear-gradient(rgba(245, 241, 234, 0.3), rgba(245, 241, 234, 0.3));
+  background: linear-gradient(rgba(245, 241, 234, 0.2), rgba(245, 241, 234, 0.2));
   z-index: -1;
 }
 
@@ -68,9 +68,8 @@ a {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: rgba(245, 241, 234, 0.9);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(231, 213, 194, 0.7);
+  background: transparent;
+  border-bottom: none;
 }
 
 .header-inner {
