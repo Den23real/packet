@@ -419,11 +419,12 @@ a {
 }
 
 .step {
-  background: #fff;
+  background: var(--card);
   border: 1px solid var(--stroke);
   border-radius: 18px;
   padding: 22px;
   min-height: 200px;
+  box-shadow: 0 12px 24px rgba(32, 26, 20, 0.08);
 }
 
 .step-number {
