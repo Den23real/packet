@@ -96,7 +96,7 @@ a {
 .nav-link {
   padding: 6px 0;
   position: relative;
-  border: 1px solid rgba(231, 213, 194, 0.9);
+  border: 2px solid #9bd43a;
   border-radius: 999px;
   padding: 6px 14px;
   transition: border-color 0.2s ease, color 0.2s ease;
@@ -118,7 +118,7 @@ a {
 }
 
 .nav-link:hover {
-  border-color: rgba(255, 107, 61, 0.6);
+  border-color: #7fba27;
   color: var(--ink);
 }
 
