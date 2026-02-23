@@ -18,11 +18,25 @@
 
 body {
   font-family: "DM Sans", sans-serif;
-  background: linear-gradient(rgba(245, 241, 234, 0.72), rgba(245, 241, 234, 0.72)),
-              url("../img/background.png") center / cover fixed,
-              var(--bg);
   color: var(--ink);
   line-height: 1.6;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("../img/background.png") center / cover no-repeat;
+  transform: scale(1.02);
+  z-index: -2;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(rgba(245, 241, 234, 0.55), rgba(245, 241, 234, 0.55));
+  z-index: -1;
 }
 
 img {
