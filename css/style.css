@@ -217,6 +217,16 @@ a {
   font-size: 18px;
 }
 
+.text-panel {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 14px;
+  background: rgba(255, 250, 243, 0.78);
+  border: 1px solid rgba(231, 213, 194, 0.7);
+  box-shadow: var(--surface-shadow);
+  backdrop-filter: blur(4px);
+}
+
 .hero-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
