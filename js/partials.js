@@ -5,17 +5,24 @@
   const includes = document.querySelectorAll('[data-include]');
   if (!includes.length) return;
 
+  const normalizeHref = (href) => {
+    if (!href) return '';
+    const clean = href.split('#')[0].split('?')[0];
+    if (!clean || clean === '/') return 'index.html';
+    const file = clean.split('/').pop();
+    return file || 'index.html';
+  };
+
   const getCurrentPage = () => {
     const path = window.location.pathname;
-    const file = path.split('/').pop();
-    if (!file || file === '') return 'index.html';
-    return file;
+    const file = path.split('/').pop() || 'index.html';
+    return normalizeHref(file);
   };
 
   const setActiveNav = () => {
     const current = getCurrentPage();
     document.querySelectorAll('.nav-link').forEach((link) => {
-      const href = link.getAttribute('href');
+      const href = normalizeHref(link.getAttribute('href'));
       if (!href) return;
       const isActive = href === current;
       link.classList.toggle('is-active', isActive);
@@ -35,16 +42,18 @@
       if (!res.ok) throw new Error(`Failed to load ${url}`);
       const html = await res.text();
       el.innerHTML = html;
-      setActiveNav();
-      if (typeof window.initSiteHeader === 'function') {
-        window.initSiteHeader();
-      }
     } catch (err) {
       console.warn(`[partials] ${err.message}`);
-      setActiveNav();
     }
   };
 
-  setActiveNav();
-  includes.forEach(loadInclude);
+  const init = async () => {
+    await Promise.all(Array.from(includes, loadInclude));
+    setActiveNav();
+    if (typeof window.initSiteHeader === 'function') {
+      window.initSiteHeader();
+    }
+  };
+
+  init();
 })();

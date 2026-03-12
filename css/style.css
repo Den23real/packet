@@ -187,11 +187,6 @@ button:focus-visible {
   overflow: hidden;
 }
 
-.btn-social {
-  padding: 10px 14px;
-  font-size: 13px;
-}
-
 .btn-icon {
   width: 40px;
   height: 40px;
@@ -206,7 +201,6 @@ button:focus-visible {
 }
 
 .nav-link {
-  padding: 6px 0;
   position: relative;
   border: 1px solid rgba(231, 213, 194, 0.9);
   border-radius: 999px;
@@ -241,11 +235,6 @@ button:focus-visible {
 
 .nav-link.is-active::after {
   width: 100%;
-}
-
-.header-cta {
-  display: flex;
-  gap: 12px;
 }
 
 .btn {

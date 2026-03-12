@@ -1,16 +1,30 @@
 (() => {
+  let cleanup = null;
+
   const init = () => {
+    if (typeof cleanup === 'function') {
+      cleanup();
+      cleanup = null;
+    }
+
     const header = document.querySelector('[data-site-header]') || document.querySelector('.site-header');
-    if (!header || header.dataset.inited === 'true') return;
+    if (!header) return;
 
     const nav = header.querySelector('[data-nav]');
     const toggle = header.querySelector('.nav-toggle');
     const overlay = header.querySelector('[data-nav-overlay]');
 
-    header.dataset.inited = 'true';
-
     const setScrolled = () => {
       header.classList.toggle('is-scrolled', window.scrollY > 10);
+    };
+
+    const closeMenu = (returnFocus = false) => {
+      if (!nav || !toggle || !overlay) return;
+      document.body.classList.remove('nav-open');
+      nav.classList.remove('is-open');
+      overlay.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      if (returnFocus) toggle.focus();
     };
 
     const openMenu = () => {
@@ -23,36 +37,44 @@
       if (firstLink) firstLink.focus();
     };
 
-    const closeMenu = () => {
-      if (!nav || !toggle || !overlay) return;
-      document.body.classList.remove('nav-open');
-      nav.classList.remove('is-open');
-      overlay.classList.remove('is-open');
-      toggle.setAttribute('aria-expanded', 'false');
-      toggle.focus();
+    const listeners = [];
+    const on = (el, event, handler, opts) => {
+      el.addEventListener(event, handler, opts);
+      listeners.push(() => el.removeEventListener(event, handler, opts));
     };
 
+    const onScroll = () => setScrolled();
+    on(window, 'scroll', onScroll, { passive: true });
+
     if (toggle && nav && overlay) {
-      toggle.addEventListener('click', () => {
+      const onToggleClick = () => {
         const isOpen = nav.classList.contains('is-open');
-        if (isOpen) closeMenu();
+        if (isOpen) closeMenu(true);
         else openMenu();
-      });
+      };
 
-      overlay.addEventListener('click', closeMenu);
-
-      nav.addEventListener('click', (event) => {
+      const onOverlayClick = () => closeMenu(true);
+      const onNavClick = (event) => {
         const target = event.target;
-        if (target && target.tagName === 'A') closeMenu();
-      });
+        if (target && target.tagName === 'A') closeMenu(false);
+      };
 
-      document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape') closeMenu();
-      });
+      const onKeyDown = (event) => {
+        if (event.key === 'Escape') closeMenu(true);
+      };
+
+      on(toggle, 'click', onToggleClick);
+      on(overlay, 'click', onOverlayClick);
+      on(nav, 'click', onNavClick);
+      on(document, 'keydown', onKeyDown);
     }
 
     setScrolled();
-    window.addEventListener('scroll', setScrolled, { passive: true });
+
+    cleanup = () => {
+      closeMenu(false);
+      listeners.forEach((off) => off());
+    };
   };
 
   window.initSiteHeader = init;
