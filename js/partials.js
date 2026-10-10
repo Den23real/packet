@@ -24,9 +24,11 @@
     document.querySelectorAll('.nav-link').forEach((link) => {
       const href = normalizeHref(link.getAttribute('href'));
       if (!href) return;
-      const isActive = href === current;
+      const catalogPages = ['pakety-fasovka.html', 'pakety-majka.html', 'odnorazovaya-posuda.html', 'meshki-musornye.html'];
+      const isCurrent = href === current;
+      const isActive = isCurrent || (href === 'catalog.html' && catalogPages.includes(current));
       link.classList.toggle('is-active', isActive);
-      if (isActive) {
+      if (isCurrent) {
         link.setAttribute('aria-current', 'page');
       } else {
         link.removeAttribute('aria-current');

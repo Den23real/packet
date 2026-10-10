@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://example.com/index.html</loc>
-  </url>
-  <url>
-    <loc>https://example.com/catalog.html</loc>
-  </url>
-  <url>
-    <loc>https://example.com/about.html</loc>
-  </url>
-  <url>
-    <loc>https://example.com/contacts.html</loc>
-  </url>
-  <url>
-    <loc>https://example.com/delivery.html</loc>
-  </url>
+  <url><loc>http://upakovka-vrn.ru/</loc></url>
+  <url><loc>http://upakovka-vrn.ru/catalog.html</loc></url>
+  <url><loc>http://upakovka-vrn.ru/about.html</loc></url>
+  <url><loc>http://upakovka-vrn.ru/delivery.html</loc></url>
+  <url><loc>http://upakovka-vrn.ru/contacts.html</loc></url>
+  <url><loc>http://upakovka-vrn.ru/pakety-fasovka.html</loc></url>
+  <url><loc>http://upakovka-vrn.ru/pakety-majka.html</loc></url>
+  <url><loc>http://upakovka-vrn.ru/odnorazovaya-posuda.html</loc></url>
+  <url><loc>http://upakovka-vrn.ru/meshki-musornye.html</loc></url>
 </urlset>

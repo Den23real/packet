@@ -13,7 +13,8 @@
     const nav = header.querySelector('[data-nav]');
     const toggle = header.querySelector('.nav-toggle');
     const overlay = header.querySelector('[data-nav-overlay]');
-    const mobile = window.matchMedia('(max-width: 980px)');
+    const closeButton = header.querySelector('[data-nav-close]');
+    const mobile = window.matchMedia('(max-width: 1100px)');
 
     const setScrolled = () => {
       header.classList.toggle('is-scrolled', window.scrollY > 10);
@@ -86,6 +87,7 @@
       };
 
       on(toggle, 'click', onToggleClick);
+      if (closeButton) on(closeButton, 'click', () => closeMenu(true));
       on(overlay, 'click', onOverlayClick);
       on(nav, 'click', onNavClick);
       on(document, 'keydown', onKeyDown);
